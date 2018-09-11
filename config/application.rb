@@ -16,7 +16,7 @@ module ThankYou
     config.generators do |g|
       g.test_framework :rspec, view_specs: false, routing_specs: false
     end
-
+    config.assets.initialize_on_precompile = false
     config.middleware.use Rack::Attack
 
     config.filter_parameters += %i[password]
